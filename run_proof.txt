@@ -1,0 +1,39 @@
+RUN 1:
+Command:
+python log_tool.py --level ERROR
+Terminal Output:
+Valid lines scanned: 4
+Lines written: 1
+Output file: filtered_logs.txt
+
+RUN 2:
+Command:
+python log_tool.py --service auth --out auth_logs.txt
+Terminal Output:
+Valid lines scanned: 4
+Lines written: 2
+Output file: auth_logs.txt
+
+RUN 3:
+Command:
+python log_tool.py --level WARN
+Terminal Output:
+Valid lines scanned: 4
+Lines written: 2
+Output file: filtered_logs.txt
+
+RUN 4:
+Command:
+python log_tool.py --service db --out db_logs.txt
+Terminal Output:
+Valid lines scanned: 4
+Lines written: 1
+Output file: db_logs.txt
+
+RUN 5:
+Command:
+python log_tool.py --level INFO --service api --out api_info.txt
+Terminal Output:
+Valid lines scanned: 4
+Lines written: 0
+Output file: api_info.txt
